@@ -1,0 +1,13 @@
+<% layout('../layout/layout.ejs') %>
+<div class="reservation">
+  <div class="container container--pall">
+    <h2 class="reservation__title">預定成功</h2>
+    <ul class="reservation__list">
+      <li>姓名: <%= reservation.name %></li>
+      <li>電話: <%= reservation.phone %></li>
+      <li>信箱: <%= reservation.email %></li>
+      <li>預約人數: <%= reservation.peopleNum %>人</li>
+    </ul>
+    <a href="/" class="button button--primary button--bg">返回首頁</a>
+  </div>
+</div>

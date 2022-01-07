@@ -1,0 +1,81 @@
+<% layout('../layout/layout.ejs') %>
+<section class="menu">
+  <div class="container container--pall">
+    <div class="menu__list">
+      <h3 class="menu__list__title">
+        <span class="menu__list__icon">
+          <i class="fas fa-leaf"></i>
+        </span>
+        訂購線上美食
+      </h3>
+      <ul class="menu__list__items">
+        <li>
+          <a href="/menu?category="
+              class="menu__list__item" value="">
+            全部
+          </a>
+        <li>
+          <a href="/menu?category=chips"
+              class="menu__list__item" value="chips">
+            最愛薯條
+          </a>
+        </li>
+        <li>
+          <a href="/menu?category=hamburger"
+              class="menu__list__item">
+            不敗漢堡系列
+          </a>
+        </li>
+        <li>
+          <a href="/menu?category=drinks"
+             class="menu__list__item">
+            飲料
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="menu__meals">
+      <div class="menu__search">
+        <div class="menu__search__bar">
+          <input type="search" id="search">
+          <label for="search">
+            <i class="fas fa-search"></i>
+          </label>
+        </div>
+        <div class="menu__search__check">
+          <a href="#" class="cart">結帳去</a>
+          <a href="#" class="cart">
+            <i class="fas fa-shopping-cart"></i>
+          </a>
+        </div>
+      </div>
+      <ul class="menu__cards">
+        <% products.forEach( product=>{ %>
+          <li class="menu__card">
+            <div class="menu__card__image">
+              <img src="<%= product.imgUrl %>" alt="<%= product.title %>">
+            </div>
+            <div class="menu__card__text">
+              <h5 class="menu__card__title">
+                <%= product.title %>
+              </h5>
+              <span class="menu__card__subtitle">
+                <%= product.subtitle %>
+              </span>
+              <span class="menu__card__price">
+                <%= product.price %>
+              </span>
+              <a href="#" class="menu__card__button">
+                <i class="fas fa-shopping-cart"></i>
+                加入購物車
+              </a>
+              <a href="#" class="menu__card__heart">
+                <i class="far fa-heart"></i>
+              </a>
+            </div>
+          </li>
+        <% }) %>
+      </ul>
+    </div>
+  </div>
+</section>
