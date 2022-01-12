@@ -19,7 +19,6 @@ const menuRouter = require('./routes/menu');
 app.use('/', indexRouter);
 app.use('/menu', menuRouter);
 
-
 // database connection
 const mongoose = require('mongoose');
 mongoose.connect(process.env.DATABASE_URL, {

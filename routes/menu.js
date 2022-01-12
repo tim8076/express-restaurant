@@ -6,7 +6,6 @@ const Product = require('../model/products');
 router.get('/', async (req, res) => {
   const { category } = req.query;
   let products;
-  console.log(req.query)
   if (category === "" || !category) {
     products = await Product.find({});
   }
