@@ -16,8 +16,11 @@ app.set('view engine', 'ejs');
 // routes
 const indexRouter = require('./routes/index');
 const menuRouter = require('./routes/menu');
+const signinRouter = require('./routes/signIn');
+
 app.use('/', indexRouter);
 app.use('/menu', menuRouter);
+app.use('/signIn', signinRouter);
 
 // database connection
 const mongoose = require('mongoose');
